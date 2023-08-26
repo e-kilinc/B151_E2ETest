@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.MedunnaHomePage;
 import pages.MedunnaRoomPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class MedunnaRoomStepDefs {
     MedunnaHomePage medunnaHomePage = new MedunnaHomePage();
@@ -55,7 +56,8 @@ public class MedunnaRoomStepDefs {
 
     @When("Save butonuna tiklanir")
     public void save_butonuna_tiklanir() throws InterruptedException {
-        medunnaRoomPage.saveSubmitButton.click();
+        ReusableMethods.click(medunnaRoomPage.saveSubmitButton);
+//        medunnaRoomPage.saveSubmitButton.click();
     }
 
     @When("Uygulama kapatilir")
